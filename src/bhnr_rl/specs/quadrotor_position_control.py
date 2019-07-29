@@ -54,10 +54,8 @@ ANGULAR_VEL_CONSTRAINT = stl.Predicate(drone_av.norm() <= np.deg2rad(5))
 # )
 
 PHI = stl.F(POSITION_SPEC, (0, 5))  # Reach goal position within 5 sec
-PHI_SAFE = stl.G(
-    ANGULAR_VEL_CONSTRAINT
-)
+PHI_SAFE = stl.G(PHI & ANGULAR_VEL_CONSTRAINT)
 
-SPEC = PHI & PHI_SAFE
+SPEC = PHI_SAFE
 
 SPEC1 = PHI
