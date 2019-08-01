@@ -60,7 +60,7 @@ class QuadrotorPositionControl(VREPEnv):
     Termination
     -----------
 
-    Time Steps >= 1000 (1000 * 50ms = 50s)
+    Time Steps >= 200 (200 * 50ms = 10s)
 
     OR
 

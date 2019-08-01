@@ -14,7 +14,7 @@ SIGNALS = (
     'collision'
 )
 
-dt = 50e-3  # s
+dt = 50e-2  # s
 
 (x_d, y_d, z_d,
  roll_d, pitch_d, yaw_d,
@@ -30,7 +30,7 @@ drone_av = sp.Matrix([dotax, dotay, dotaz])
 
 goal_pos = sp.Matrix([x_g, y_g, z_g])
 
-POSITION_SPEC = stl.Predicate((goal_pos - drone_pos).norm() <= 0.01)
+POSITION_SPEC = stl.Predicate((goal_pos - drone_pos).norm() <= 0.05)
 
 GOAL_VELOCITY_SPEC = POSITION_SPEC >> stl.Predicate(
     drone_lv.norm() <= 0.001)  # Reached goal => stay still

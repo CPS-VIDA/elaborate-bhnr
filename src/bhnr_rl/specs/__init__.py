@@ -10,7 +10,7 @@ register('SimpleQuadrotorPositionControlEnv-v0',
          efficient_robustness)
 
 register('VREPQuadrotorPositionControlEnv-v0',
-         quadrotor_position_control.SPEC1,
+         quadrotor_position_control.SPEC,
          quadrotor_position_control.SIGNALS,
          efficient_robustness)
 

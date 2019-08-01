@@ -174,7 +174,7 @@ def plateau_maxmin(x: pd.Series, a: int or float, fn='max') -> pd.Series:
         y = x.rolling(2).min()
     else:
         raise ValueError("fn=('min'|'max'), got {}".format(fn))
-    y[0] = x[0]
+    y.iloc[0] = x.iloc[0]
 
     # Read values in [0, a)
     threshold = y.idxmin() + a
